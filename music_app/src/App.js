@@ -16,6 +16,7 @@ class App extends React.Component{
     super(props)
     this.state = {
       music:[],
+      favorites: []
       }
     }
     fetchPosts = () => {
@@ -29,14 +30,20 @@ class App extends React.Component{
     this.fetchPosts()
   }
 
+  addToFavorites = (song) => {
+    this.setState ({
+      favorites: [song, ...this.state.favorites]
+    })
+  }
+
     render(){
+      console.log(this.state.favorites);
       return(
         <>
           <Header />
-          <Main music={this.state.music}/>
+          <Main music={this.state.music} addToFavorites={this.addToFavorites} favorites={this.state.favorites}/>
         </>
       )
     }
   }
 export default App;
-
