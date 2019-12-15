@@ -4,6 +4,12 @@ class Side extends Component {
     constructor(props) {
         super(props);
     }
+    removeFavorite = (song) => {
+        this.setState (
+         this.props.favorites.splice(song, 1)
+        )
+    }
+    
 
     render() {
         return (
@@ -12,7 +18,7 @@ class Side extends Component {
               <ul>
               {this.props.favorites.map((favSong, index) =>
                 <li key={index}>
-                  <img src={favSong.coverArt}/> {favSong.songName} - {favSong.artistName} - {favSong.albumName}  <span className='buttons'><button>Rate</button><button>Remove</button></span>
+                  <img src={favSong.coverArt}/> {favSong.songName} - {favSong.artistName} - {favSong.albumName}  <span className='buttons'><button>Rate</button><button onClick={()=>{this.removeFavorite(favSong)}}>Remove</button></span>
                 </li>
               )}
               </ul>
