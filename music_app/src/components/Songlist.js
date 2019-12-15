@@ -21,7 +21,7 @@ class Songlist extends Component {
               </thead>
               <tbody>
                 {this.props.music.map((song, index) =>
-                  <Songs key={index} songs={song} />
+                  <Songs key={index} songs={song} addToFavorites={this.props.addToFavorites} />
                 )}
               </tbody>
             </table>
