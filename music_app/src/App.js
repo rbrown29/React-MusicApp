@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header'
 import Main from './components/Main'
+
 // import music from './data.js'
 
 let baseUrl = '';
@@ -35,6 +36,7 @@ class App extends React.Component{
       favorites: [song, ...this.state.favorites]
     })
   }
+  
 
     render(){
       console.log(this.state.favorites);
