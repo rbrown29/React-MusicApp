@@ -11,3 +11,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  border: 1px solid black;
+  background-image: url('https://images.unsplash.com/photo-1498145645178-ab2c7cebc433?ixlib=rb-1.2.1&auto=format&fit=crop&w=1225&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.header > h1 {
+  align-self: center;
+}
+
+.nav {
+  border: 1px solid black;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  border: 1px solid black;
+  display: flex;
+  height: 700px;
+  text-align: center;
+}
+
+.side {
+  border: 1px solid black;
+  width: 20%;
+
+}
+
+.songlist {
+  border: 1px solid black;
+  width: 80%;
+}
+
+.covers {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+table {
+  margin: auto;
+}
