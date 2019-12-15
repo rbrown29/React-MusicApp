@@ -12,8 +12,8 @@ class Main extends Component {
       console.log(this.props.music);
         return (
             <div className='main'>
-              <Side />
-              <Songlist music={this.props.music}/>
+              <Side favorites={this.props.favorites}/>
+              <Songlist music={this.props.music} addToFavorites={this.props.addToFavorites}/>
             </div>
         );
     }
