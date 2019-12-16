@@ -12,7 +12,7 @@ class Main extends Component {
       console.log(this.props.music);
         return (
             <div className='main'>
-              <Side favorites={this.props.favorites} />
+              <Side favorites={this.props.favorites} setRating={this.props.setRating} stars={this.props.stars}/>
               <Songlist music={this.props.music} addToFavorites={this.props.addToFavorites}/>
             </div>
         );
