@@ -7,9 +7,9 @@ import Main from './components/Main'
 let baseUrl = '';
 
 if (process.env.NODE_ENV === 'development') {
-  baseUrl = 'https://mighty-earth-87374.herokuapp.com/api'
+  baseUrl = 'https://cors-anywhere.herokuapp.com/https://mighty-earth-87374.herokuapp.com/api'
 } else {
-  baseUrl = 'https://mighty-earth-87374.herokuapp.com/api'
+  baseUrl = 'https://cors-anywhere.herokuapp.com/https://mighty-earth-87374.herokuapp.com/api'
 }
 
 class App extends React.Component{
@@ -36,7 +36,6 @@ class App extends React.Component{
       favorites: [song, ...this.state.favorites]
     })
   }
-  
 
     render(){
       console.log(this.state.favorites);
