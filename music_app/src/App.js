@@ -9,7 +9,7 @@ let baseUrl = '';
 if (process.env.NODE_ENV === 'development') {
   baseUrl = 'https://cors-anywhere.herokuapp.com/https://mighty-earth-87374.herokuapp.com/api'
 } else {
-  baseUrl = 'https://cors-anywhere.herokuapp.com/https://mighty-earth-87374.herokuapp.com/api'
+  baseUrl = 'https://mighty-earth-87374.herokuapp.com/api'
 }
 
 class App extends React.Component{
@@ -17,7 +17,8 @@ class App extends React.Component{
     super(props)
     this.state = {
       music:[],
-      favorites: []
+      favorites: [],
+      stars: 0
       }
     }
     fetchPosts = () => {
@@ -36,13 +37,19 @@ class App extends React.Component{
       favorites: [song, ...this.state.favorites]
     })
   }
-
+   setRating = () => {
+      this.setState ({
+        stars: this.state.stars += 1
+      })
+  }
     render(){
       console.log(this.state.favorites);
+      console.log(this.state.stars);
       return(
         <>
           <Header />
-          <Main music={this.state.music} addToFavorites={this.addToFavorites} favorites={this.state.favorites}/>
+          <Main music={this.state.music} addToFavorites={this.addToFavorites} favorites={this.state.favorites} setRating={this.setRating}
+          stars={this.state.stars} />
         </>
       )
     }
