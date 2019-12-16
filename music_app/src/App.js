@@ -36,30 +36,13 @@ class App extends React.Component{
       favorites: [song, ...this.state.favorites]
     })
   }
-  handleDelete = (id) => {
-  fetch(`${baseUrl}/music/${id}`, {
-    method: 'DELETE',
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    }
-  })
-    .then(json => {
-      this.setState(prevState => {
-        const music = prevState.music.filter(music => music.id !== id)
-        return { music }
-      })
-    })
-    .catch(err => console.log(err))
-}
 
     render(){
       console.log(this.state.favorites);
       return(
         <>
           <Header />
-          <Main music={this.state.music} addToFavorites={this.addToFavorites} favorites={this.state.favorites}
-           handleDelete={this.handleDelete}/>
+          <Main music={this.state.music} addToFavorites={this.addToFavorites} favorites={this.state.favorites}/>
         </>
       )
     }

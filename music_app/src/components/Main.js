@@ -13,7 +13,7 @@ class Main extends Component {
         return (
             <div className='main'>
               <Side favorites={this.props.favorites} />
-              <Songlist music={this.props.music} addToFavorites={this.props.addToFavorites} handleDelete={this.props.handleDelete}/>
+              <Songlist music={this.props.music} addToFavorites={this.props.addToFavorites}/>
             </div>
         );
     }
