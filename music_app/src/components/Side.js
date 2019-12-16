@@ -8,12 +8,12 @@ class Side extends Component {
          this.props.favorites.splice(song, 1)
         )
     }
-    // setRating = (index) => {
-    //   this.setState ( {
-    //     this.props.setRating(),
-    //     this.props.favorites.push(index, this.props.stars)
-    //   })
-    //  }
+    setRating = (index) => {
+      this.setState ( {
+        this.props.setRating(),
+        this.props.favorites.push(index, this.props.stars)
+      })
+     }
    
     render() {
         return (
