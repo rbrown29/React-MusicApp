@@ -24,7 +24,9 @@ class Main extends Component {
               <button onClick={this.toggleFavs}>Show Favs</button>
               {(this.state.showFavs) ? <Side favorites={this.props.favorites} setRating={this.props.setRating} stars={this.props.stars} fetchPosts={this.props.fetchPosts} /> : null}
 
-              <Songlist music={this.props.music} addToFavorites={this.props.addToFavorites} handleCreate={this.props.handleCreate}/>
+              <Songlist music={this.props.music} addToFavorites={this.props.addToFavorites} handleCreate={this.props.handleCreate}
+              handleDelete={this.props.handleDelete}/>
+
             </div>
         );
     }

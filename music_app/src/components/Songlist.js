@@ -21,6 +21,7 @@ class Songlist extends Component {
       this.props.handleCreate(this.state)
     }
 
+
     render() {
         return (
           <div className='songlist'>
@@ -30,7 +31,7 @@ class Songlist extends Component {
                 <input type="text" id="artistName" value={this.state.artistName} onChange={this.handleChange}/>
                 <input type="text" id="albumName" value={this.state.albumName} onChange={this.handleChange}/>
                 <input type="text" id="coverArt" value={this.state.coverArt} onChange={this.handleChange}/>
-              <input type="submit" value="Add to Music List"/>
+              <input className="input1" type="submit" value="Add to Music List"/>
             </form>
             <table>
               <thead>
@@ -43,7 +44,7 @@ class Songlist extends Component {
               </thead>
               <tbody>
                 {this.props.music.map((song, index) =>
-                  <Songs key={index} songs={song} addToFavorites={this.props.addToFavorites} />
+                  <Songs key={index} songs={song} addToFavorites={this.props.addToFavorites} handleDelete={this.props.handleDelete}/> 
                 )}
               </tbody>
             </table>
