@@ -62,6 +62,24 @@ class App extends React.Component{
     }).catch( error => console.log(error))
   }
 
+  handleDelete = (id) => {
+  fetch(`${baseUrl}/music/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(json => {
+      this.setState(prevState => {
+        const music = prevState.music.filter(music => music.id !== id)
+        return { music }
+      })
+    })
+    .catch(err => console.log(err))
+}
+
+
   componentDidMount () {
     this.fetchPosts()
   }
@@ -87,7 +105,8 @@ class App extends React.Component{
         <>
           <Header />
           <Main music={this.state.music} addToFavorites={this.addToFavorites} favorites={this.state.favorites} setRating={this.setRating}
-          stars={this.state.stars} fetchPosts={this.fetchPosts} handleCreate={this.handleCreate} toggleFavs={this.toggleFavs}/>
+          stars={this.state.stars} fetchPosts={this.fetchPosts} handleCreate={this.handleCreate} toggleFavs={this.toggleFavs}
+          handleDelete={this.handleDelete}/>
         </>
       )
     }
