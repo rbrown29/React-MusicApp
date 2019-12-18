@@ -44,9 +44,9 @@ class Side extends Component {
                     {(favSong.rating === 4)? <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p> : null}
                     {(favSong.rating === 5)? <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p> : null}
                   <span className='buttons'>
-                  <button onClick={()=>{this.decreaseRating(favSong)}}>&#9734;</button>
-                    <button onClick={()=>{this.setRating(favSong)}}>&#9733;</button>
-                    <button onClick={()=>{this.removeFavorite(index)}}>Remove</button>
+                  <button className='favbuttons' onClick={()=>{this.decreaseRating(favSong)}}>&#9734;</button>
+                    <button className='favbuttons' onClick={()=>{this.setRating(favSong)}}>&#9733;</button>
+                    <button className='favbuttons' onClick={()=>{this.removeFavorite(index)}}>Remove</button>
                   </span>
                 </li>
               )}

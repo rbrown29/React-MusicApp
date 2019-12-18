@@ -35,10 +35,10 @@ class Songlist extends Component {
           <div className='songlist'>
             <h2>All Music</h2>
             <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder='Song Title' id="songName" value={this.state.songName} onChange={this.handleChange}/>
-                <input type="text" placeholder='Artist' id="artistName" value={this.state.artistName} onChange={this.handleChange}/>
-                <input type="text" placeholder='Album' id="albumName" value={this.state.albumName} onChange={this.handleChange}/>
-                <input type="text" placeholder='Cover Art' id="coverArt" value={this.state.coverArt} onChange={this.handleChange}/>
+                <input type="text" placeholder=' Song Title' id="songName" value={this.state.songName} onChange={this.handleChange}/>
+                <input type="text" placeholder=' Artist' id="artistName" value={this.state.artistName} onChange={this.handleChange}/>
+                <input type="text" placeholder=' Album' id="albumName" value={this.state.albumName} onChange={this.handleChange}/>
+                <input type="text" placeholder=' Cover Art' id="coverArt" value={this.state.coverArt} onChange={this.handleChange}/>
               <input className="input1" type="submit" value="Add to Music List"/>
             </form>
             <table>
@@ -47,7 +47,6 @@ class Songlist extends Component {
                   <th>Title</th>
                   <th>Artist</th>
                   <th>Album</th>
-                  <th>CoverArt</th>
                 </tr>
               </thead>
               <tbody>
