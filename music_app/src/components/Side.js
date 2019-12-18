@@ -28,7 +28,7 @@ class Side extends Component {
 
     render() {
         return (
-            <div className='side'>
+            <div className={(this.props.showFavs) ? 'show-side' : 'hide-side'}>
               <h2>Your Favorites</h2>
               <ul>
               {this.props.favorites.map((favSong, index) =>
