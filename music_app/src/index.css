@@ -13,7 +13,7 @@ code {
 }
 
 .header {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background-image: url('https://images.unsplash.com/photo-1498145645178-ab2c7cebc433?ixlib=rb-1.2.1&auto=format&fit=crop&w=1225&q=80');
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,22 +29,46 @@ code {
   color: white;
 }
 
-/* .nav {
-  border: 1px solid black;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-} */
 
 .main {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  width: 90%;
+  margin: auto;
   display: flex;
   text-align: center;
 }
 
-.side {
-  border: 1px solid black;
-  width: 20%;
+
+.hide-side {
+  width: 1px;
+  background: beige;
+  transition: all 1.8s ease-in-out;
+}
+
+.hide-side > ul  {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.hide-side > h2  {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.show-side {
+  width: 25%;
+  background: beige;
+  font-size: 20px;
+  color: black;
+  transition: all 1s ease-in-out;
+ }
+
+ .show-side > ul  {
+   transition: all 2s ease-in-out;
+ }
+
+.toggle {
+  width: 3%;
 }
 
 table {
@@ -158,6 +182,3 @@ input {
   -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   transition: all 0.3s ease 0s;
 }
-
-
-

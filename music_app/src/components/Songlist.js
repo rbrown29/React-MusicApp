@@ -13,12 +13,20 @@ class Songlist extends Component {
     }
 
     handleChange = (event) => {
-      this.setState({[event.target.id] : event.target.value})
+      this.setState({
+        [event.target.id] : event.target.value
+      })
     }
 
     handleSubmit = (event) => {
       event.preventDefault()
       this.props.handleCreate(this.state)
+      this.setState({
+        songName:'',
+        artistName:'',
+        albumName: '',
+        coverArt: ''
+      })
     }
 
 
@@ -27,10 +35,10 @@ class Songlist extends Component {
           <div className='songlist'>
             <h2>All Music</h2>
             <form onSubmit={this.handleSubmit}>
-                <input type="text" id="songName" value={this.state.songName} onChange={this.handleChange}/>
-                <input type="text" id="artistName" value={this.state.artistName} onChange={this.handleChange}/>
-                <input type="text" id="albumName" value={this.state.albumName} onChange={this.handleChange}/>
-                <input type="text" id="coverArt" value={this.state.coverArt} onChange={this.handleChange}/>
+                <input type="text" placeholder='Song Title' id="songName" value={this.state.songName} onChange={this.handleChange}/>
+                <input type="text" placeholder='Artist' id="artistName" value={this.state.artistName} onChange={this.handleChange}/>
+                <input type="text" placeholder='Album' id="albumName" value={this.state.albumName} onChange={this.handleChange}/>
+                <input type="text" placeholder='Cover Art' id="coverArt" value={this.state.coverArt} onChange={this.handleChange}/>
               <input className="input1" type="submit" value="Add to Music List"/>
             </form>
             <table>
@@ -44,7 +52,7 @@ class Songlist extends Component {
               </thead>
               <tbody>
                 {this.props.music.map((song, index) =>
-                  <Songs key={index} songs={song} addToFavorites={this.props.addToFavorites} handleDelete={this.props.handleDelete}/> 
+                  <Songs key={index} songs={song} addToFavorites={this.props.addToFavorites} handleDelete={this.props.handleDelete}/>
                 )}
               </tbody>
             </table>
