@@ -1,8 +1,18 @@
 # React-MusicApp
 
 ### Authors: Richard Brown and Gianni Nola
-<a href="https://fierce-springs-93898.herokuapp.com"/>Heroku Depolyment site</a><br>
-<a href="https://mighty-earth-87374.herokuapp.com/api/music">Backend Heroku Depolyment site</a><br>
+### Updated React Frontend and Added Node Backend by Richard Brown
+
+### Live Site Link
+<a href="https://musicapp-3xgy.onrender.com/">Frontend</a><br>
+<a href="https://music-8w2a.onrender.com/songs">Backend/Songs</a><br>
+<a href="https://music-8w2a.onrender.com/favorites">Backend/Favorites</a>
+
+### Links and Resources to new project
+<a href="https://github.com/rbrown29/Music-App-Frontend">GitHub Project Front End</a><br>
+<a href="https://github.com/rbrown29/Music-App-Backend">GitHub Project Backend</a>
+
+### Links and Resources to old project
 <a href="https://github.com/rbrown29/React-MusicApp/">GitHub Project Front End</a><br>
 <a href="https://github.com/rbrown29/MusicApp">GitHub Project Backend</a>
 
